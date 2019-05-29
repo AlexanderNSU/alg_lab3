@@ -12,6 +12,13 @@ def linear_search(data, value):
 
 
 def binary_search(data, value):
-    # Реализуйте алгоритм здесь
-    pass
-
+    first=0
+    last=len(data)-1
+    while first <= last:
+        middle = (first+last)//2
+        if data[middle]==value:
+            return middle
+        elif data[middle] < value:
+            first = middle + 1
+        else:
+            last = middle - 1
